@@ -19,7 +19,7 @@ public class CountryClientConfig {
     @Bean
     public CountryClientService countryClient(Jaxb2Marshaller marshaller) {
             CountryClientService client = new CountryClientService();
-            client.setDefaultUri("http://localhost:8080/ws");
+            client.setDefaultUri("http://172.17.0.1/ws");
             client.setMarshaller(marshaller);
             client.setUnmarshaller(marshaller);
             return client;
