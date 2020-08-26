@@ -18,7 +18,7 @@ public class CountryClientService extends WebServiceGatewaySupport {
         request.setName(country);
 
         logger.info("Requesting information for " + country);
-
+        logger.info(getWebServiceTemplate().getDefaultUri());
         GetCountryResponse response = (GetCountryResponse) getWebServiceTemplate().marshalSendAndReceive(request);
 
         return response;
